@@ -43,9 +43,11 @@ const postSchema = new Schema({
   ],
 });
 
+postSchema.pre('save', async function (next) {
+    this.likes = this.likers.length;
+    next();
+  });
+
 const Post = model('Post', postSchema);
 
 module.exports = Post;
-
-// you can use the like and unlike methods to increase and decrease the likes on the post
-// you can also check if the user has already liked the post by checking if their id exists in the 'likers' array

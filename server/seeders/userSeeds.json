@@ -2,71 +2,127 @@
   {
     "username": "Brian Kernighan",
     "email": "bkernighan@techfriends.dev",
-    "password": "password01"
+    "password": "password01",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Max Kanat-Alexander",
     "email": "mkanatalexander@techfriends.dev",
-    "password": "password02"
+    "password": "password02",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Why The Lucky Stiff",
     "email": "wtls@techfriends.dev",
-    "password": "password03"
+    "password": "password03",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Kent Beck",
     "email": "kbeck@techfriends.dev",
-    "password": "password04"
+    "password": "password04",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Alan Kay",
     "email": "akay@techfriends.dev",
-    "password": "password06"
+    "password": "password06",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "C.A.R. Hoare",
     "email": "choare@techfriends.dev",
-    "password": "password07"
+    "password": "password07",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "David Thomas",
     "email": "dthomas@techfriends.dev",
-    "password": "password08"
+    "password": "password08",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Donald Knuth",
     "email": "dknuth@techfriends.dev",
-    "password": "password09"
+    "password": "password09",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Lernantino",
     "email": "lernantino@techfriends.dev",
-    "password": "password10"
+    "password": "password10",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Lynn24",
     "email": "lynn24@gmail.com",
-    "password": "password123"
+    "password": "password123",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "Elfo",
     "email": "hiImElfo@elfmail.com",
-    "password": "password123"
+    "password": "password123",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "GrumboWumbo45",
     "email": "grumbo@gmail.com",
-    "password": "password123"
+    "password": "password123",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "TripleJ",
     "email": "jjj@gmail.com",
-    "password": "password123"
+    "password": "password123",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   },
   {
     "username": "FredsMom",
     "email": "linda@gmail.com",
-    "password": "password123"
+    "password": "password123",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": []
   }
 ]
