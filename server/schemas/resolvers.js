@@ -5,8 +5,17 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
       users: async () => {
-        return User.find();
+        return User.find().populate('posts');
       },
+      user: async (parent, { username }) => {
+        return User.findOne({ username }).populate('posts');
+      },
+      posts: async (parent, { username }) => {
+        const params = username ? { username } : {};
+        return Post.find(params).sort({ createdAt: -1 });
+      },
+      post: async (parent, { postId }) => {
+        return Post.findOne({ _id: postId });
     },
   
     Mutation: {
@@ -33,6 +42,6 @@ const resolvers = {
         return { token, user };
       },
     },
-  };
+  }};
   
   module.exports = resolvers;

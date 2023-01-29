@@ -6,14 +6,20 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    followers: Int
+    followers: [User]!
     following: [User]!
     userPosts: [Post]!
-    userLikes: [Like]!
+    userLikes: [Post]!
+    followerCount: Int
+    followingCount: Int
   }
 
   type Post {
     _id: ID
+    audioFile: String
+    artist: String
+    likes: Int
+    likers: [User]!
     createdAt: String
   }
 
@@ -24,7 +30,8 @@ const typeDefs = gql`
 
   type Tag {
     _id: ID
-    createdAt: String
+    tagName: String
+    postsWithThisTag: [Post]!
   }
 
   type Auth {
@@ -34,6 +41,10 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
+    user(username: String!): User
+    posts: [Post]
+    post(postId: ID!): Post
+    tags: [Tag]
   }
 
   type Mutation {
