@@ -9,6 +9,10 @@ const postSchema = new Schema({
     maxlength: 150,
     trim: true,
   },
+  imageFile: {
+    type: String,
+    trim: true
+  },
   audioFile: {
     type: String,
     required: true,

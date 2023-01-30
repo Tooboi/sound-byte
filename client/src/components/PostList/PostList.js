@@ -17,6 +17,7 @@ const PostList = ({
       {
         posts.map((post) => (
           <div key={post._id} className="card mb-3">
+            <img src='https://source.boringavatars.com/bauhaus/100/?square' alt="..."></img>
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
                 <Link
@@ -25,7 +26,7 @@ const PostList = ({
                 >
                   {post.artist} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this thought on {post.createdAt}
+                    posted {post.createdAt}
                   </span>
                 </Link>
               ) : (

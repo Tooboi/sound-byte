@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_USER = gql`
-  query user($username: String!) {
-    user(username: $username) {
+  query me {
+    me {
       _id
       username
       email
@@ -11,7 +11,10 @@ export const QUERY_USER = gql`
         songName
         audioFile
         artist
-        likers
+        likers {
+          _id
+        }
+        createdAt
         tags
       }
     }
@@ -26,8 +29,31 @@ export const QUERY_POSTS = gql`
       audioFile
       artist
       likes
-      likers {}
+      likers {
+        _id
+      }
       createdAt
+    }
+  }
+`;
+
+export const QUERY_ME = gql`
+  query userPosts($username: String!) {
+    user(username: $username) {
+      _id
+      username
+      email
+      posts {
+        _id
+      songName
+      audioFile
+      artist
+      likes
+      likers {
+        _id
+      }
+      createdAt
+      }
     }
   }
 `;

@@ -12,8 +12,8 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 // import SingleThought from './pages/SingleThought';
-// import Profile from './pages/Profile';
-// import Header from './components/Header';
+import Profile from './pages/Profile';
+import Header from './components/Header/Header';
 // import Footer from './components/Footer';
 
 // Construct our main GraphQL API endpoint
@@ -45,7 +45,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          {/* <Header /> */}
+          <Header />
           <div className="container">
             <Routes>
               <Route 
@@ -60,10 +60,10 @@ function App() {
                 path="/signup"
                 element={<Signup />}
               />
-              {/* <Route 
+              <Route 
                 path="/me"
                 element={<Profile />}
-              /> */}
+              />
               {/* <Route 
                 path="/profiles/:username"
                 element={<Profile />}

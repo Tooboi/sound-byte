@@ -8,7 +8,7 @@ const typeDefs = gql`
     password: String!
     followers: [ID]
     following: [ID]
-    userPosts: [Post]
+    posts: [Post]!
     userLikes: [Post]
     followerCount: Int
     followingCount: Int
@@ -19,6 +19,7 @@ const typeDefs = gql`
     songName: String!
     audioFile: String!
     artist: String
+    tags: [Tag]!
     likes: Int
     likers: [User]
     createdAt: String
