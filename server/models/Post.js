@@ -41,8 +41,31 @@ const postSchema = new Schema({
   ],
   tags: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Tag',
+      tagName: {
+        type: String,
+        minlength: 1,
+        maxlength: 24,
+        trim: true,
+      },
+    },
+  ],
+  comments: [
+    {
+      commentText: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 280,
+      },
+      commentAuthor: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      },
+      createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
+      },
     },
   ],
 });

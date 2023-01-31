@@ -20,12 +20,11 @@ const Home = () => {
           ) : (
         <PostList
         // send the queried posts and page title through props
-      posts={posts}
-      title="Daily Bytes"
-    />
-  )}
-</div>
-
+          posts={posts}
+          title="Daily Bytes"
+        />
+        )}
+      </div>
         </div>
       </main>
     );

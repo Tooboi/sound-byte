@@ -12,23 +12,30 @@ const typeDefs = gql`
     userLikes: [Post]
     followerCount: Int
     followingCount: Int
+    profileImgURL: String
   }
 
   type Post {
     _id: ID!
     songName: String!
+    imageFile: String!
     audioFile: String!
     artist: String
-    tags: [Tag]!
+    tags: [Tag]
     likes: Int
     likers: [User]
+    comments: [Comment]
     createdAt: String
   }
-
+  
   type Tag {
-    _id: ID!
-    tagName: String!
-    postsWithThisTag: [Post]
+    tagName: String
+  }
+
+  type Comment {
+    commentText: String!
+    commentAuthor: User!
+    createdAt: String
   }
 
   type Auth {
@@ -38,10 +45,12 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(id: ID!): User
+    user(username: String!): User!
+    me: User
     allPosts: [Post]
     posts(username: String!): [Post]
     getPost(postId: ID!): Post
+    profile(username: String!): [User]
     tags: [Tag]
     tag(id: ID!): Tag
   }

@@ -7,8 +7,11 @@ const resolvers = {
     users: async () => {
       return User.find({}).populate('posts');
     },
+    profile: async (parent, { username }) => {
+      return User.findOne({ username });
+    },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('posts');
+      return User.findOne({ username: username });
     },
     posts: async (parent, { username }) => {
       const params = username ? { username } : {};
@@ -19,6 +22,13 @@ const resolvers = {
     },
     allPosts: async () => {
       return Post.find()
+    },
+    me: async (parent, args, context) => {
+      // console.log(context.user.username, " is logged in");
+      if (context.user) {
+        return User.findOne({ username: context.user.username });
+      }
+      throw new AuthenticationError('You need to be logged in!');
     }
   },
     Mutation: {

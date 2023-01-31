@@ -1,44 +1,56 @@
 [
   {
     "songName": "Opposite Sides",
+    "imageFile": "https://source.boringavatars.com/bauhaus/100/?square",
     "audioFile": "https://res.cloudinary.com/dlvmcylti/video/upload/v1672376058/Sound%20Byte/Ocoeur_-_Opposite_Sides_-_2A_-_131_dmblvf.flac",
-    "artist": "Brian Kernighan",
+    "artist": "Crumb",
     "likers": [],
-    "tags": []
+    "tags": [],
+    "comments": []
   },
   {
     "songName": "Tear in Abyss",
+    "imageFile": "https://source.boringavatars.com/bauhaus/100/?square",
     "audioFile": "https://res.cloudinary.com/dlvmcylti/video/upload/v1672376058/Sound%20Byte/Ocoeur_-_Opposite_Sides_-_2A_-_131_dmblvf.flac",
-    "artist": "Alan Kay",
+    "artist": "Sapphire",
     "likers": [],
-    "tags": []
+    "tags": [],
+    "comments": []
   },
   {
     "songName": "See Me",
+    "imageFile": "https://source.boringavatars.com/bauhaus/100/?square",
     "audioFile": "https://res.cloudinary.com/dlvmcylti/video/upload/v1672376058/Sound%20Byte/Ocoeur_-_Opposite_Sides_-_2A_-_131_dmblvf.flac",
-    "artist": "C.A.R. Hoare",
+    "artist": "Glue",
     "likers": [],
-    "tags": []
+    "tags": [],
+    "comments": []
   },
   {
     "songName": "Faith In Persona",
+    "imageFile": "https://source.boringavatars.com/bauhaus/100/?square",
     "audioFile": "https://res.cloudinary.com/dlvmcylti/video/upload/v1672376058/Sound%20Byte/Ocoeur_-_Opposite_Sides_-_2A_-_131_dmblvf.flac",
-    "artist": "Donald Knuth",
+    "artist": "KentBeck",
     "likers": [],
-    "tags": []
+    "tags": [],
+    "comments": []
   },
   {
     "songName": "Someone in the Room",
+    "imageFile": "https://source.boringavatars.com/bauhaus/100/?square",
     "audioFile": "https://res.cloudinary.com/dlvmcylti/video/upload/v1672376058/Sound%20Byte/Ocoeur_-_Opposite_Sides_-_2A_-_131_dmblvf.flac",
-    "artist": "Donald Knuth",
+    "artist": "tooboi",
     "likers": [],
-    "tags": []
+    "tags": [],
+    "comments": []
   },
   {
     "songName": "Just to be Needed",
+    "imageFile": "https://source.boringavatars.com/bauhaus/100/?square",
     "audioFile": "https://res.cloudinary.com/dlvmcylti/video/upload/v1672376058/Sound%20Byte/Ocoeur_-_Opposite_Sides_-_2A_-_131_dmblvf.flac",
     "artist": "Elfo",
     "likers": [],
-    "tags": []
+    "tags": [],
+    "comments": []
   }
 ]

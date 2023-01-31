@@ -64,10 +64,10 @@ function App() {
                 path="/me"
                 element={<Profile />}
               />
-              {/* <Route 
-                path="/profiles/:username"
+              <Route 
+                path="/user/:username"
                 element={<Profile />}
-              /> */}
+              />
               <Route 
                 path="/posts/:postId"
                 element={<SinglePost />}

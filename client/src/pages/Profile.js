@@ -2,7 +2,6 @@ import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-// import ThoughtForm from '../components/ThoughtForm';
 import PostList from '../components/PostList/PostList';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -11,19 +10,27 @@ import Auth from '../utils/auth';
 
 const Profile = () => {
   const { username: userParam } = useParams();
-
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+  console.log(userParam);
+console.log(useQuery(QUERY_USER, {
+  variables: { username: userParam },
+}));
+  const { loading, error, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
   });
+  
 
-  const user = data?.me || data?.user || {};
+  const user = data?.user || data?.me || {};
+  console.log(user);
   // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+  if (Auth.loggedIn() && Auth.getProfile().data.user === userParam) {
     return <Navigate to="/me" />;
   }
 
   if (loading) {
     return <div>Loading...</div>;
+  }
+  if (error) {
+    return <div>{error.message}</div>;
   }
 
   if (!user?.username) {
@@ -44,7 +51,7 @@ const Profile = () => {
 
         <div className="col-12 col-md-10 mb-5">
           <PostList
-            thoughts={user.thoughts}
+            thoughts={user.username}
             title={`${user.username}'s thoughts...`}
             showTitle={false}
             showUsername={false}

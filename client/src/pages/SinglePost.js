@@ -7,10 +7,9 @@ const SinglePost = () => {
     const { postId } = useParams();
     const { loading, error, data } = useQuery(QUERY_SINGLE_POST, {
         // pass URL parameter
-        
         variables: { postId: postId},
   });
-  console.log(data);
+  // get the data from the query or an empty obj to allow it to continue without data
   const post = data?.getPost || {};
   
   return (
