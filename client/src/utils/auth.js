@@ -8,6 +8,7 @@ class AuthService {
   loggedIn() {
     const token = this.getToken();
     // If there is a token and it's not expired, return `true`
+    console.log(token && !this.isTokenExpired(token) ? "Logged In" : "Not Logged In");
     return token && !this.isTokenExpired(token) ? true : false;
   }
 
@@ -17,6 +18,7 @@ class AuthService {
     // If the expiration time is less than the current time (in seconds), the token is expired and we return `true`
     if (decoded.exp < Date.now() / 1000) {
       localStorage.removeItem('id_token');
+      console.log("expired");
       return true;
     }
     // If token hasn't passed its expiration time, return `false`
@@ -28,6 +30,7 @@ class AuthService {
   }
 
   login(idToken) {
+    console.log("login");
     localStorage.setItem('id_token', idToken);
     window.location.assign('/');
   }
@@ -38,5 +41,5 @@ class AuthService {
   }
 }
 
-const authService = new AuthService();
-export default authService;
+const Auth = new AuthService();
+export default Auth;

@@ -1,6 +1,6 @@
 [
   {
-    "username": "Brian Kernighan",
+    "username": "Sapphire",
     "email": "bkernighan@techfriends.dev",
     "password": "password01",
     "followers": [],
@@ -9,7 +9,7 @@
     "userLikes": []
   },
   {
-    "username": "Max Kanat-Alexander",
+    "username": "Crumb",
     "email": "mkanatalexander@techfriends.dev",
     "password": "password02",
     "followers": [],
@@ -18,7 +18,7 @@
     "userLikes": []
   },
   {
-    "username": "Why The Lucky Stiff",
+    "username": "Glue",
     "email": "wtls@techfriends.dev",
     "password": "password03",
     "followers": [],
@@ -27,7 +27,7 @@
     "userLikes": []
   },
   {
-    "username": "Kent Beck",
+    "username": "KentBeck",
     "email": "kbeck@techfriends.dev",
     "password": "password04",
     "followers": [],
@@ -36,7 +36,7 @@
     "userLikes": []
   },
   {
-    "username": "Alan Kay",
+    "username": "Alakay",
     "email": "akay@techfriends.dev",
     "password": "password06",
     "followers": [],
@@ -45,7 +45,7 @@
     "userLikes": []
   },
   {
-    "username": "C.A.R. Hoare",
+    "username": "Froggy",
     "email": "choare@techfriends.dev",
     "password": "password07",
     "followers": [],
@@ -54,7 +54,7 @@
     "userLikes": []
   },
   {
-    "username": "David Thomas",
+    "username": "DavidThomas",
     "email": "dthomas@techfriends.dev",
     "password": "password08",
     "followers": [],
@@ -63,13 +63,16 @@
     "userLikes": []
   },
   {
-    "username": "Donald Knuth",
+    "username": "DonaldKnuth",
     "email": "dknuth@techfriends.dev",
     "password": "password09",
     "followers": [],
     "following": [],
     "userPosts": [],
-    "userLikes": []
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
   },
   {
     "username": "Lernantino",
@@ -78,7 +81,10 @@
     "followers": [],
     "following": [],
     "userPosts": [],
-    "userLikes": []
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
   },
   {
     "username": "Lynn24",
@@ -87,7 +93,10 @@
     "followers": [],
     "following": [],
     "userPosts": [],
-    "userLikes": []
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
   },
   {
     "username": "Elfo",
@@ -96,7 +105,10 @@
     "followers": [],
     "following": [],
     "userPosts": [],
-    "userLikes": []
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
   },
   {
     "username": "GrumboWumbo45",
@@ -105,7 +117,10 @@
     "followers": [],
     "following": [],
     "userPosts": [],
-    "userLikes": []
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
   },
   {
     "username": "TripleJ",
@@ -114,7 +129,10 @@
     "followers": [],
     "following": [],
     "userPosts": [],
-    "userLikes": []
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
   },
   {
     "username": "FredsMom",
@@ -123,6 +141,21 @@
     "followers": [],
     "following": [],
     "userPosts": [],
-    "userLikes": []
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
+  },
+  {
+    "username": "tooboi",
+    "email": "japica123@gmail.com",
+    "password": "password123",
+    "followers": [],
+    "following": [],
+    "userPosts": [],
+    "userLikes": [],
+    "followerCount": "20",
+    "followingCount": "83",
+    "profileImgURL": "urlurl"
   }
 ]

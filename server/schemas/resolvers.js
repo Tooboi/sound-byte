@@ -7,18 +7,28 @@ const resolvers = {
     users: async () => {
       return User.find({}).populate('posts');
     },
+    profile: async (parent, { username }) => {
+      return User.findOne({ username });
+    },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('posts');
+      return User.findOne({ username: username });
     },
     posts: async (parent, { username }) => {
       const params = username ? { username } : {};
       return Post.find(params).sort({ createdAt: -1 });
     },
-    post: async (parent, { postId }) => {
+    getPost: async (parent, { postId }) => {
       return Post.findOne({ _id: postId });
     },
     allPosts: async () => {
       return Post.find()
+    },
+    me: async (parent, args, context) => {
+      // console.log(context.user.username, " is logged in");
+      if (context.user) {
+        return User.findOne({ username: context.user.username });
+      }
+      throw new AuthenticationError('You need to be logged in!');
     }
   },
     Mutation: {

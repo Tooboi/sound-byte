@@ -7,22 +7,21 @@ const PostList = ({
   showTitle = true,
   showUsername = true,
 }) => {
-//   if (!posts.length) {
-//     return <h3>No Posts Yet</h3>;
-//   }
-
+  if (!posts.length) {
+    return <h3>No Posts Yet</h3>;
+  }
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
       {
         posts.map((post) => (
           <div key={post._id} className="card mb-3">
-            <img src='https://source.boringavatars.com/bauhaus/100/?square' alt="..."></img>
+            <img src={post.imageFile} alt="..."></img>
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${post.artist}`}
+                  to={`/user/${post.artist}`}
                 >
                   {post.artist} <br />
                   <span style={{ fontSize: '1rem' }}>
@@ -44,7 +43,7 @@ const PostList = ({
               className="btn btn-primary btn-block btn-squared"
               to={`/posts/${post._id}`}
             >
-              Join the discussion on this thought.
+              {post.songName}
             </Link>
           </div>
         ))}
