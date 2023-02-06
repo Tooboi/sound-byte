@@ -26,7 +26,7 @@ const resolvers = {
     me: async (parent, args, context) => {
       // console.log(context.user.username, " is logged in");
       if (context.user) {
-        return User.findOne({ username: context.user.username });
+        return await User.findOne({ username: context.user.username });
       }
       throw new AuthenticationError('You need to be logged in!');
     }
