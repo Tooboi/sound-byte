@@ -7,43 +7,44 @@ const PostList = ({
   showTitle = true,
   showUsername = true,
 }) => {
-  if (!posts.length) {
-    return <h3>No Posts Yet</h3>;
-  }
+  // if (posts.length === 0) {
+  //   return <h3>No Posts Yet</h3>;
+  // }
+  console.log('posts: ', posts);
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
       {
-        posts.map((post) => (
-          <div key={post._id} className="card mb-3">
-            <img src={post.imageFile} alt="..."></img>
+        posts.map((posts) => (
+          <div key={posts._id} className="card mb-3">
+            <img src={posts.imageFile} alt="..."></img>
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/user/${post.artist}`}
+                  to={`/user/${posts.artist}`}
                 >
-                  {post.artist} <br />
+                  {posts.artist} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    posted {post.createdAt}
+                    posted {posts.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this thought on {post.createdAt}
+                    You had this thought on {posts.createdAt}
                   </span>
                 </>
               )}
             </h4>
             <div className="card-body bg-light p-2">
-              <p>{post.likes}</p>
+              <p>{posts.likes}</p>
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
-              to={`/posts/${post._id}`}
+              to={`/posts/${posts._id}`}
             >
-              {post.songName}
+              {posts.songName}
             </Link>
           </div>
         ))}
