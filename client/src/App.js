@@ -1,10 +1,7 @@
 import React from 'react';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
+import { ChakraProvider, Box, Text, Link, VStack, Code, CSSReset, Grid, theme } from '@chakra-ui/react';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -42,42 +39,32 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
-            <Routes>
-              <Route 
-                path="/"
-                element={<Home />}
-              />
-              <Route 
-                path="/login"
-                element={<Login />}
-              />
-              <Route 
-                path="/signup"
-                element={<Signup />}
-              />
-              <Route 
-                path="/me"
-                element={<Profile />}
-              />
-              <Route 
-                path="/user/:username"
-                element={<Profile />}
-              />
-              <Route 
-                path="/posts/:postId"
-                element={<SinglePost />}
-              />
-            </Routes>
-          </div>
-          {/* <Footer /> */}
-        </div>
-      </Router>
-    </ApolloProvider>
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <Box fontSize="xl">
+        <Grid minH="100vh">
+          <ColorModeSwitcher justifySelf="flex-end" />
+          <ApolloProvider client={client}>
+            <Router>
+              <div className="flex-column justify-flex-start min-100-vh">
+                <Header />
+                <div className="container">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/me" element={<Profile />} />
+                    <Route path="/:username" element={<Profile />} />
+                    <Route path="/posts/:postId" element={<SinglePost />} />
+                  </Routes>
+                </div>
+                {/* <Footer /> */}
+              </div>
+            </Router>
+          </ApolloProvider>
+        </Grid>
+      </Box>
+    </ChakraProvider>
   );
 }
 
