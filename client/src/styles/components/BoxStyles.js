@@ -1,6 +1,6 @@
-import { defineStyleConfig } from '@chakra-ui/react';
+// import { defineStyleConfig } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
-export const BoxStyles = defineStyleConfig({
+const Box = {
   // Styles for the base style
   baseStyle: {},
   // Styles for the size variations
@@ -18,6 +18,6 @@ export const BoxStyles = defineStyleConfig({
 },
   // The default `size` or `variant` values
   defaultProps: {},
-})
+}
 
-
+export default Box;

@@ -1,6 +1,6 @@
 // import { defineStyleConfig } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
-export const FlexStyles = {
+const Flex = {
   // Styles for the base style
   baseStyle: {},
   // Styles for the size variations
@@ -19,3 +19,5 @@ export const FlexStyles = {
   // The default `size` or `variant` values
   defaultProps: {},
 }
+
+export default Flex;
