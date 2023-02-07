@@ -7,6 +7,11 @@ const likeSchema = new Schema({
       ref: 'User',
     },
   ],
+},
+{
+  versionKey: false
+}, {
+  timestamps: true
 });
 
 const Like = model('Like', likeSchema);
