@@ -3,8 +3,10 @@ import { useQuery } from '@apollo/client';
 import PostList from '../components/PostList/PostList';
 import { QUERY_POSTS } from '../utils/queries';
 
+
 const Home = () => {
   // Hits utils/queries POSTS and returns all posts
+
     const { loading: loadingPosts, error: errorPosts, data: dataPosts } = useQuery(QUERY_POSTS);
     const posts = dataPosts?.allPosts || [];
   

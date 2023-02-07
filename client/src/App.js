@@ -1,10 +1,11 @@
 import React from 'react';
 import { ChakraProvider, Box, Text, Link, VStack, Code, CSSReset, Grid, theme } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
+import CustomTheme from './styles/theme';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -39,11 +40,8 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <CSSReset />
-      <Box fontSize="xl">
+      <Box fontSize="xl" variant="primary">
         <Grid minH="100vh">
-          <ColorModeSwitcher justifySelf="flex-end" />
           <ApolloProvider client={client}>
             <Router>
               <div className="flex-column justify-flex-start min-100-vh">
@@ -64,7 +62,6 @@ function App() {
           </ApolloProvider>
         </Grid>
       </Box>
-    </ChakraProvider>
   );
 }
 
