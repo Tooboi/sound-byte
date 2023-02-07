@@ -68,12 +68,27 @@ const postSchema = new Schema({
       },
     },
   ],
-});
+},
+{
+  versionKey: false
+}, {
+  timestamps: true
+},
+{
+  toJSON: {
+    virtuals: true,
+  },
+},);
 
 postSchema.pre('save', async function (next) {
     this.likes = this.likers.length;
     next();
   });
+
+// Number of comments post has
+postSchema.virtual('commentCount').get(function () {
+  return this.comments.length;
+});
 
 const Post = model('Post', postSchema);
 

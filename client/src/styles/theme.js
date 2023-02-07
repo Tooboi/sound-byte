@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 import { BoxStyles as Box } from './components/BoxStyles';
+import { FlexStyles as Flex } from './components/FlexStyles';
 
 const theme = {
   config: {
@@ -79,6 +80,7 @@ const theme = {
   },
   components: {
     Box,
+    Flex,
   },
 };
 

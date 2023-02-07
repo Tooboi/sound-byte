@@ -7,6 +7,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import theme from './styles/theme';
+import './App.css';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);

@@ -1,6 +1,6 @@
-import { defineStyleConfig } from '@chakra-ui/react';
+// import { defineStyleConfig } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
-export const BoxStyles = defineStyleConfig({
+export const FlexStyles = {
   // Styles for the base style
   baseStyle: {},
   // Styles for the size variations
@@ -12,12 +12,10 @@ export const BoxStyles = defineStyleConfig({
       color: "white"
     }),
     header: (props) => ({
-      bg: mode('grey.700', 'primary.200')(props),
+      bg: mode('grey.800', 'primary.300')(props),
       color: "white"
     }),
 },
   // The default `size` or `variant` values
   defaultProps: {},
-})
-
-
+}
