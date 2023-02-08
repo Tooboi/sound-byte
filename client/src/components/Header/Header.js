@@ -32,6 +32,7 @@ import {
   useStyleConfig,
   Stack,
   Spacer,
+  Text,
   ButtonGroup,
   useBreakpointValue,
 } from '@chakra-ui/react';
@@ -64,7 +65,7 @@ const Header = () => {
             <Stack direction="row" ps="8" mb="1">
               <Flex>
                 <Link href="/feed" pe="4" style={{ textDecoration: 'none' }}>
-                  Feed
+                Feed
                 </Link>
               </Flex>
               <Flex>

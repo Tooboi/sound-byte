@@ -40,7 +40,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-      <Box fontSize="xl" variant="header">
+      <Box fontSize="xl">
         <Grid minH="100vh">
           <ApolloProvider client={client}>
             <Router>
