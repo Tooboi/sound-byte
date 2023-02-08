@@ -1,9 +1,9 @@
 import React from 'react';
 
-function LargeTrack({}) {
+function LargeTrack({ post, user }) {
 
     return (
-        <div></div>
+        <div>{post.artist} - {post.songName} - {post.createdAt} </div>
     )
 }
 

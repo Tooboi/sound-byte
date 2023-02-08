@@ -3,8 +3,8 @@ import LargeTrack from '../Tracks/LargeTrack';
 
 function UserPostList({ user, posts }) {
   const desiredUsername = user.username;
-  const filteredPosts = posts.filter((post) => post.username === desiredUsername);
-
+  const filteredPosts = posts.filter((post) => post.artist === desiredUsername);
+console.log(filteredPosts);
   if (filteredPosts.length === 0) {
     return (
       <div className="mt-5">
@@ -15,7 +15,7 @@ function UserPostList({ user, posts }) {
     return (
       <div>
         {filteredPosts.map((post) => (
-          <LargeTrack post={post} user={user} />
+          <LargeTrack post={post} user={user} key={post._id}/>
         ))}
       </div>
     );
