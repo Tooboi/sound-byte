@@ -28,17 +28,24 @@ import {
   MenuList,
   MenuItem,
   MenuDivider,
-  useDisclosure,
-  useStyleConfig,
   Stack,
   Spacer,
-  Text,
-  ButtonGroup,
-  useBreakpointValue,
 } from '@chakra-ui/react';
-import { HamburgerIcon, SettingsIcon, AddIcon, Search2Icon, InfoOutlineIcon, ChevronDownIcon } from '@chakra-ui/icons';
+import { SettingsIcon, Search2Icon, InfoOutlineIcon, ChevronDownIcon } from '@chakra-ui/icons';
+
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
+import { QUERY_ME } from '../../utils/queries';
+
 
 const Header = () => {
+  const { username: userParam } = useParams();
+
+  const { loading: loadingMe, error: errorMe, data: dataMe } = useQuery(QUERY_ME, {
+    variables: { username: userParam },
+  });
+  const user = dataMe?.me || {};
+  const profileURL = `https://source.boringavatars.com/beam/32/${user.username}`;
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -90,6 +97,7 @@ const Header = () => {
           <Flex p="2" justify="end">
             <Stack direction="row" spacing={2}>
               <Flex>
+              <Link href={'/upload'} style={{ textDecoration: 'none' }}>
                 <Button
                   leftIcon={
                     <Icon viewBox="0 0 448 512">
@@ -104,22 +112,24 @@ const Header = () => {
                 >
                   Upload
                 </Button>
+                </Link>
               </Flex>
               <Flex>
                 <Menu>
                   <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost">
                     <Wrap>
                       <WrapItem>
-                        <Avatar size="sm" name={Auth.getProfile().data.username} src="https://source.boringavatars.com/pixel/32/username"></Avatar>
+                        <Avatar size="sm" name={user.username} src={profileURL}></Avatar>
                       </WrapItem>
                     </Wrap>
                   </MenuButton>
                   <MenuList bg="grey.900">
                     <Link href={'/me'} style={{ textDecoration: 'none' }}>
                       <MenuItem bg="grey.900" _hover={{ bg: 'grey.800' }}>
-                        Profile
+                        {user.username}
                       </MenuItem>
                     </Link>
+                    <MenuDivider />
                     <MenuItem bg="grey.900" _hover={{ bg: 'grey.800' }}>
                       Likes
                     </MenuItem>
