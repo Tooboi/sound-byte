@@ -20,6 +20,11 @@ const userSchema = new Schema(
       required: true,
       minlength: 5,
     },
+    bio: {
+      type: String,
+      required: false,
+      maxlength: 250,
+    },
     followers: [
       {
         type: Schema.Types.ObjectId,

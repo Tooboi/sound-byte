@@ -21,41 +21,60 @@ const resolvers = {
       return Post.findOne({ _id: postId });
     },
     allPosts: async () => {
-      return Post.find()
+      return Post.find();
     },
     me: async (parent, args, context) => {
-      // console.log(context.user.username, " is logged in");
-      if (context.user) {
-        return await User.findOne({ username: context.user.username });
+      if (context.user || args.username) {
+        const user = await User.findOne({ username: context.user.username || args.username })
+          .populate('posts')
+          .populate('followers')
+          .populate('following')
+          .populate('userLikes');
+        return user;
       }
       throw new AuthenticationError('You need to be logged in!');
-    }
-  },
-    Mutation: {
-      addUser: async (parent, { username, email, password }) => {
-        const user = await User.create({ username, email, password });
-        const token = signToken(user);
-        return { token, user };
-      },
-      login: async (parent, { email, password }) => {
-        const user = await User.findOne({ email });
-
-        if (!user) {
-          throw new AuthenticationError('No user found with this email address');
-        }
-
-        const correctPw = await user.isCorrectPassword(password);
-
-        if (!correctPw) {
-          throw new AuthenticationError('Incorrect credentials');
-        }
-
-        const token = signToken(user);
-
-        return { token, user };
-      },
     },
-  };
+  },
+  Mutation: {
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+      return { token, user };
+    },
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
+      if (!user) {
+        throw new AuthenticationError('No user found with this email address');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
+    editProfile: async (parent, args, context) => {
+      const updatedUser = await User.findOneAndUpdate(
+        { username: args.username || context.user.username },
+        {
+          $set: {
+            bio: args.bio,
+            profileImgURL: args.profileImgURL,
+          },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+      return updatedUser;
+    },
+  },
+};
 
 module.exports = resolvers;
