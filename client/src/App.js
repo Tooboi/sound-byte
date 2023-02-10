@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Header from './components/Header/Header';
+import ProfileEdit from './components/Profile/ProfileEdit'
 // import Footer from './components/Footer';
 
 // Construct our main GraphQL API endpoint
@@ -52,6 +53,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/me" element={<Profile />} />
+                    <Route path="/me/edit" element={<ProfileEdit />} />
                     <Route path="/:username" element={<Profile />} />
                     <Route path="/posts/:postId" element={<SinglePost />} />
                   </Routes>
