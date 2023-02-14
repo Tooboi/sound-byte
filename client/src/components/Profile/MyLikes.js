@@ -1,10 +1,10 @@
 import React from 'react';
 import LargeTrack from '../Tracks/LargeTrack';
 
-function UserPostList({ user, posts }) {
+function MyLikes({ user, posts }) {
   const desiredUsername = user.username;
   const filteredPosts = posts.filter((post) => post.artist === desiredUsername);
-console.log(filteredPosts);
+// console.log(filteredPosts);
   if (filteredPosts.length === 0) {
     return (
       <div className="mt-5">
@@ -22,4 +22,4 @@ console.log(filteredPosts);
   }
 }
 
-export default UserPostList;
+export default MyLikes;
