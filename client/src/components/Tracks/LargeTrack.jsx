@@ -4,14 +4,9 @@ import {
 } from '@chakra-ui/react'
 function LargeTrack({ post, user }) {
   const profileURL = `https://source.boringavatars.com/beam/128/${user.username}`;
-
-  // const [toggleState, setToggleState] = useState(5);
-  // const toggleTab = (index) => {
-  //   setToggleState(index);
-  // };
-
+  console.log(post);
   return (
-      <Box></Box>
+      <Box>{post.songName}</Box>
   );
 }
 
