@@ -23,3 +23,30 @@
   .glass-text {
     color: rgba(255, 255, 255, 0.65);
   }
+
+  /* - Profile */
+
+  .content {
+    display: none;
+  }
+  .content-active {
+    display: flex;
+  }
+  .tab-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.17);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+  }
+  .tabs {
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 150ms ease-out;
+  }
+  .active-tabs {
+    background-color: rgba(255, 255, 255, 0.17);
+  }
+  .stats {
+    border-left: 1px solid rgba(255, 255, 255, 0.17);
+  }
+  .border-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+  }
