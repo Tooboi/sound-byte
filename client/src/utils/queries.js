@@ -71,6 +71,13 @@ export const QUERY_ME = gql`
       }
       createdAt
       }
+      followerCount
+      followingCount
+      profileImgURL
+      bio
+      userLikes {
+        _id
+      }
     }
   }
 `;

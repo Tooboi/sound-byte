@@ -40,7 +40,7 @@ import { QUERY_ME } from '../../utils/queries';
 
 const Header = () => {
   const { username: userParam } = useParams();
-
+  
   const { loading: loadingMe, error: errorMe, data: dataMe } = useQuery(QUERY_ME, {
     variables: { username: userParam },
   });
@@ -50,7 +50,7 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
-
+  console.log(user);
   if (Auth.loggedIn()) {
     return (
       <Box
