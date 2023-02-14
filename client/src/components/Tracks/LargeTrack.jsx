@@ -16,7 +16,7 @@ function LargeTrack({ post, user }) {
       <Hide below="md">
       <GridItem colSpan={1} rowSpan={1} rowStart={3} rowEnd={4} colStart={2} colEnd={3} minW="30%" bg="royalblue">stats</GridItem>
       </Hide>
-      <GridItem rowSpan={1} colSpan={[2, 2, 1, 1]} rowStart={3} rowEnd={4} bg="tomato">body</GridItem>
+      <GridItem rowSpan={1} colSpan={[2, 2, 1, 1]} rowStart={3} rowEnd={4} >body</GridItem>
     </Grid>
   );
 }
