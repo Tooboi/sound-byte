@@ -11,7 +11,7 @@ import Profile from './pages/Profile';
 import Header from './components/Header/Header';
 import ProfileEdit from './components/Profile/ProfileEdit';
 // import Footer from './components/Footer';
-import Sidenav from './components/Nav/Sidenav'
+// import Sidenav from './components/Nav/Sidenav'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -38,23 +38,13 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [showSidebar, onSetShowSidebar] = useState(false);
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="min-h-screen bg-stone-900 text-stone-300 2xl:container 2xl:mx-auto flex">
-          {/* <Header /> */}
-          <Sidenav
-            onSidebarHide={() => {
-              onSetShowSidebar(false);
-            }}
-            showSidebar={showSidebar}
-          />
-          <Routes
-            onSidebarHide={() => {
-              onSetShowSidebar(true);
-            }}
-          >
+        <div className="min-h-screen bg-stone-900 text-stone-300 2xl:container 2xl:mx-auto">
+          <Header />
+
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
