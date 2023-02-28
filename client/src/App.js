@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -11,6 +11,7 @@ import Profile from './pages/Profile';
 import Header from './components/Header/Header';
 import ProfileEdit from './components/Profile/ProfileEdit';
 // import Footer from './components/Footer';
+import Sidenav from './components/Nav/Sidenav'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -37,30 +38,35 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [showSidebar, onSetShowSidebar] = useState(false);
   return (
-    <div fontSize="xl">
-      <div minH="100vh">
-        <ApolloProvider client={client}>
-          <Router>
-            <div className="flex-column justify-flex-start min-100-vh">
-              <Header />
-              <div className="container">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/signup" element={<Signup />} />
-                  <Route path="/me" element={<Profile />} />
-                  <Route path="/me/edit" element={<ProfileEdit />} />
-                  <Route path="/:username" element={<Profile />} />
-                  <Route path="/posts/:postId" element={<SinglePost />} />
-                </Routes>
-              </div>
-              {/* <Footer /> */}
-            </div>
-          </Router>
-        </ApolloProvider>
-      </div>
-    </div>
+    <ApolloProvider client={client}>
+      <Router>
+        <div className="min-h-screen bg-stone-900 text-stone-300 2xl:container 2xl:mx-auto flex">
+          {/* <Header /> */}
+          <Sidenav
+            onSidebarHide={() => {
+              onSetShowSidebar(false);
+            }}
+            showSidebar={showSidebar}
+          />
+          <Routes
+            onSidebarHide={() => {
+              onSetShowSidebar(true);
+            }}
+          >
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/me" element={<Profile />} />
+            <Route path="/me/edit" element={<ProfileEdit />} />
+            <Route path="/:username" element={<Profile />} />
+            <Route path="/posts/:postId" element={<SinglePost />} />
+          </Routes>
+          {/* <Footer /> */}
+        </div>
+      </Router>
+    </ApolloProvider>
   );
 }
 
