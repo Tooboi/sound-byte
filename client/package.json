@@ -5,13 +5,17 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@apollo/client": "^3.5.8",
-    "@chakra-ui/icons": "^2.0.17",
-    "@chakra-ui/react": "^2.4.9",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@headlessui/react": "^1.7.12",
+    "@heroicons/react": "^2.0.16",
+    "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+    "clsx": "^1.2.1",
+    "flowbite": "^1.6.3",
+    "flowbite-react": "^0.3.8",
     "framer-motion": "^6.5.1",
     "graphql": "^15.4.0",
     "jwt-decode": "^2.2.0",
@@ -47,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
   }
 }
