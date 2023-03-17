@@ -1,14 +1,10 @@
-![GitHub language count](https://img.shields.io/github/languages/count/tooboi/sound-byte)
-![GitHub](https://img.shields.io/github/license/tooboi/sound-byte)
-![GitHub issues](https://img.shields.io/github/issues/tooboi/sound-byte)
-![GitHub contributors](https://img.shields.io/github/contributors/tooboi/sound-byte)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/tooboi/sound-byte/main)
+![GitHub language count](https://img.shields.io/github/languages/count/tooboi/sound-byte?color=459c6f)
+![GitHub](https://img.shields.io/github/license/tooboi/sound-byte?color=459c6f)
+![GitHub issues](https://img.shields.io/github/issues/tooboi/sound-byte?color=459c6f)
+![GitHub contributors](https://img.shields.io/github/contributors/tooboi/sound-byte?color=459c6f)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/tooboi/sound-byte/main?color=459c6f)
 
 # 🎹 Sound Byte
-
-![GitHub top language](https://img.shields.io/github/languages/top/JoshuaCarter99/bandshare?color=459c6f)
-![GitHub language count](https://img.shields.io/github/languages/count/JoshuaCarter99/bandshare?color=459c6f)
-![GitHub](https://img.shields.io/github/license/JoshuaCarter99/bandshare?color=459c6f)
 
 ## Description
 
