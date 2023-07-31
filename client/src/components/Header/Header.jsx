@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 // import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import Search from './Search';
+import Home from '../../pages/Home'
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import { QUERY_ME } from '../../utils/queries';
@@ -297,53 +298,7 @@ const Header = () => {
 </aside>
 
 <div class="p-4 sm:ml-64">
-   <div class="p-4 border-2 border-stone-200 border-dashed rounded-lg dark:border-stone-700 mt-14">
-      <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded bg-stone-50 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded bg-stone-50 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded bg-stone-50 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-      </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded bg-stone-50 dark:bg-stone-800">
-         <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-      </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded bg-stone-50 dark:bg-stone-800">
-         <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-stone-50 h-28 dark:bg-stone-800">
-            <p class="text-2xl text-stone-400 dark:text-stone-500">+</p>
-         </div>
-      </div>
-   </div>
+      <Home />
 </div>
 </>
     );
