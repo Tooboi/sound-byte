@@ -43,7 +43,6 @@ function App() {
       <Router>
         <div className="min-h-screen bg-stone-900 text-stone-300 2xl:container 2xl:mx-auto">
           <Header />
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />

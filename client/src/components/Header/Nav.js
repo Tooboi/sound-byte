@@ -171,7 +171,7 @@ const Header = () => {
         className="header-box"
       >
         <Grid templateColumns="repeat(3, 1fr)">
-          <Flex px="4" align="center" justify="start">
+          {/* <Flex px="4" align="center" justify="start">
             <Link href={'/'}>
               <Icon viewBox="0 0 448 512" color="primary.400" boxSize="48px" pr="2">
                 <path
@@ -188,7 +188,7 @@ const Header = () => {
               </Flex>
             </Stack>
             <Spacer></Spacer>
-          </Flex>
+          </Flex> */}
           <Show breakpoint="(max-width: 552px)">
             <Spacer></Spacer>
           </Show>
