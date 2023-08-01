@@ -22,5 +22,8 @@
   "homepage": "https://sound-byte-five.vercel.app/",
   "devDependencies": {
     "concurrently": "^5.3.0"
+  },
+  "dependencies": {
+    "vercel": "^31.2.1"
   }
 }
